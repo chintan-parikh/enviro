@@ -841,7 +841,7 @@ footer .copyright {
 .footer {
 	margin-top: 70px;
 	border-top: 1px solid #e5e5e5;
-	background: url(../img/bg_footer.png);
+	background-color: green;
 	padding: 60px 0 0 0;
 	color: #919191;
 }
@@ -2150,3 +2150,14 @@ div#output{display:none;}
     }
     
 
+.navbar-static-top{
+	background-color: green;
+}
+
+.navbar .nav > li > a{
+	color:white;
+}
+
+.navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus{
+	color:black;
+}
