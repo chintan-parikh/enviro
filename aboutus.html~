@@ -28,34 +28,63 @@
 <body data-spy="scroll" data-target=".bs-docs-sidebar">
 <!-- Navbar
     ================================================== -->
-<div class="jumbotron masthead" style="height:600px">
-  <div class="splash"> <img src="assets/img/slider-bg.jpg" alt="Banner" /> </div>
-  <div class="splash"> <img src="assets/img/slider-bg.jpg" alt="Banner" /> </div>
-  <div class="splash"> <img src="assets/img/slider-bg.jpg" alt="Banner" /> </div>
-  <div class="nav-agency">
-    <div class="navbar navbar-static-top"> 
-      <!-- navbar-fixed-top -->
-      <div class="navbar-inner">
-        <div class="container"> <a class="brand" href="index.html"> <img src="assets/img/Logo.png" alt="Logo"></a>
-          <div id="main-nav">
-            <div class="nav-collapse collapse">
-              <ul class="nav">
-                <li class="active"><a href="../">Home</a> </li>
-                <li><a href="./about-us/" >About Us</a></li>
-                <li><a href="./services/" >Services</a></li>
-                <li><a href="./assoc/" >Consultancies</a></li>
-                <!--<li><a href="#pricing" >Pricing</a></li>-->
-                <li><a href="./blog" >Blog</a></li>
-                <li><a href="./contact/" target="_blank" >Contact Us</a></li>
-                <!--<li><a href="index.html">Purchase</a> </li>-->
-              </ul>
-            </div>
+<div class="nav-agency">
+  <div class="navbar navbar-static-top"> 
+    <!-- navbar-fixed-top -->
+    <div class="navbar-inner">
+      <div class="container"> <a class="brand" href="index.html"> <img src="assets/img/Logodark.png" alt="Logo"></a>
+        <div id="main-nav">
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class=""><a href="index.html">Home</a> </li>
+              <li class="dropdown active"><a class="dropdown-toggle" data-toggle="dropdown" href="javascript:"> Work <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="work.html">One Column</a></li>
+                  <li><a href="work-two-columns.html">Two Column</a></li>
+                  <li><a href="work-three-columns.html">Three Column</a></li>
+                  <li><a href="work-details.html">Work Details</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="javascript:"> Pricing <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="pricing.html">Four Column</a></li>
+                  <li><a href="pricing-three-columns.html">Three Column</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="javascript:" class="dropdown-toggle" data-toggle="dropdown"> Pages <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="faq.html">FAQ</a></li>
+                  <li><a href="contact.html">Contact Us</a></li>
+                  <li><a href="components.html">Components</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="javascript:"> Blog <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="blog.html">Blog Page</a></li>
+                  <li><a href="blog-single.html">Single Page</a></li>
+                </ul>
+              </li>
+              <li><a href="index.html">Purchase</a> </li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div id="team-scroller" class="carousel scale">
+</div>
+<div id="work" class="container">
+	<h1 style="test-align:center"> About US </h1>
+	<p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem </p?
+</div>
+<div class="container">
+	<section id="about-us">
+        <div class="container">
+            <div class="box">
+                <div class="center">
+                    <h2>Meet the Team</h2>
+                </div>
+                <div class="gap"></div>
+                <div id="team-scroller" class="carousel scale">
                     <div class="carousel-inner">
                         <div class="item active">
                             <div class="row">
@@ -108,7 +137,11 @@
                     <a class="right-arrow" href="#team-scroller" data-slide="next">
                         <i class="icon-angle-right icon-4x"></i>
                     </a>
-  </div><!--/.carousel-->
+                </div><!--/.carousel-->
+            </div><!--/.box-->
+        </div><!--/.container-->
+</section><!--/#about-us-->
+</div>
 <!-- Footer
     ================================================== -->
 <footer class="footer">
