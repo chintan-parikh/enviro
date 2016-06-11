@@ -1790,6 +1790,8 @@ label {
 	cursor: pointer;
 	border: none;
 }
+#work-hover {
+	display: none;
 }
 .work-item-image-container:hover {
 	-webkit-transition: background-color 0.1s ease-out, color 0.1s ease-out;
@@ -1798,6 +1800,9 @@ label {
 	transition: background-color 0.1s ease-out, color 0.1s ease-out;
 	opacity: 1;
 }
+
+.work-item-image-container:hover #work-hover{
+	display: block;
 	
 }
 .work-item-overlay .inner ul li a.detail-link {

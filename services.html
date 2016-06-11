@@ -22,85 +22,73 @@
 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
 <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
 <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+<style>
+.graphics {
+	display: none;
+}
+
+.nature {
+	display: none;
+}
+
+.food {
+	display: none;
+}
+
+</style>
 </head>
 <body data-spy="scroll" data-target=".bs-docs-sidebar">
 <!-- Navbar
     ================================================== -->
 <div class="nav-agency">
-  <div class="navbar navbar-static-top"> 
-    <!-- navbar-fixed-top -->
-    <div class="navbar-inner">
-      <div class="container"> <a class="brand" href="index.html"> <img src="assets/img/Logodark.png" alt="Logo"></a>
-        <div id="main-nav">
-          <div class="nav-collapse collapse">
-            <ul class="nav">
-              <li class=""><a href="index.html">Home</a> </li>
-              <li class="dropdown active"><a class="dropdown-toggle" data-toggle="dropdown" href="javascript:"> Work <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <li><a href="work.html">One Column</a></li>
-                  <li><a href="work-two-columns.html">Two Column</a></li>
-                  <li><a href="work-three-columns.html">Three Column</a></li>
-                  <li><a href="work-details.html">Work Details</a></li>
-                </ul>
-              </li>
-              <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="javascript:"> Pricing <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <li><a href="pricing.html">Four Column</a></li>
-                  <li><a href="pricing-three-columns.html">Three Column</a></li>
-                </ul>
-              </li>
-              <li class="dropdown"><a href="javascript:" class="dropdown-toggle" data-toggle="dropdown"> Pages <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <li><a href="faq.html">FAQ</a></li>
-                  <li><a href="contact.html">Contact Us</a></li>
-                  <li><a href="components.html">Components</a></li>
-                </ul>
-              </li>
-              <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="javascript:"> Blog <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <li><a href="blog.html">Blog Page</a></li>
-                  <li><a href="blog-single.html">Single Page</a></li>
-                </ul>
-              </li>
-              <li><a href="index.html">Purchase</a> </li>
-            </ul>
+    <div class="navbar navbar-static-top"> 
+      <!-- navbar-fixed-top -->
+      <div class="navbar-inner">
+        <div class="container"> <a class="brand" href="index.html"> <img src="assets/img/Logo.png" alt="Logo"></a>
+          <div id="main-nav">
+            <div class="nav-collapse collapse">
+              <ul class="nav">
+                <li class="active"><a href="../">Home</a> </li>
+                <li><a href="aboutus.html" >About Us</a></li>
+                <li><a href="services.html" >Services</a></li>
+                <li><a href="consultancies.html" >Consultancies</a></li>
+                <!--<li><a href="#pricing" >Pricing</a></li>-->
+                <li><a href="blog.html" >Blog</a></li>
+                <li><a href="./contact" target="_blank" >Contact Us</a></li>
+                <!--<li><a href="index.html">Purchase</a> </li>-->
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 <div class="container">
   <div class="row-fluid">
     <div class="span12">
       <div class="page-header">
         <div class="row-fluid">
           <div class="span4">
-            <h1>Services</h1>
+            <h1> Work - Two Columns</h1>
           </div>
-          <div class="span8">
-            <!--<ul id="work-filter">
-              <li><a href="#" data-filter="*" class="btn btn-success ione-col">Show All</a></li>
-              <li><a href="#" data-filter=".graphics" class="btn ione-col">Graphics</a></li>
-              <li><a href="#" data-filter=".nature" class="btn ione-col">Nature</a></li>
-              <li><a href="#" data-filter=".food" class="btn ione-col">Food</a></li>
-            </ul>-->
-	    <select class="select1">
-		<option value="*">Show All</option>
-		<option value=".graphics">Graphics</option>
-		<option value=".nature">Nature</option>
-		<option value=".food">Food</option>
+          <div class="span8" style="text-align: right;">
+            <select class="select1">
+		<option value="*"> Select all </option>
+		<option value="graphics"> Graphics </option>
+		<option value="nature"> Nature </option>
+		<option value="food"> Food </option>
 	    </select>
           </div>
         </div>
       </div>
     </div>
   </div>
+  <h4 class="para"></h4>
   <div class="row filter-this1">
     <div class="span12">
       <div id="portfolio" class="row">
         <div class="work">
-          <div class="span6 work-item graphics">
+          <div class="span6 work-item graphics " id="item1">
             <h2> iPhonegraphy</h2>
             <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
               incididunt ut labore et dolore magna aliqua.</p>
@@ -307,13 +295,37 @@
 <script src="assets/js/jquery.prettyPhoto.js" type="text/javascript"></script> 
 <script src="assets/js/superfish.js" type="text/javascript"></script> 
 <script src="assets/js/custom.js" type="text/javascript"></script>
-<script>
-	$('.select1').on('change', 
-		function(){
-			var filVal = this.value;
-			$grid.isotope({ filter: filVal });		
-		});
-
+<script type="text/javascript">
+	$('.select1').on('change',
+			function(){
+			$(this).find("option:selected").each(function(){
+				if($(this).attr("value")=="graphics"){
+					$('.para').text("All the graphics services");
+					$(".nature").css('display','none');
+					$(".food").css('display','none');
+					$(".graphics").css('display','block');
+				}
+				else if($(this).attr("value")=="food"){
+					$('.para').text("All the food services");
+					$(".graphics").css('display','none');
+					$(".nature").css('display','none');
+					$(".food").css('display','block');
+				}
+				else if($(this).attr("value")=="nature"){
+					$('.para').text("All the nature services");
+					$(".graphics").css('display','none');
+					$(".food").css('display','none');
+					$(".nature").css('display','block');
+				}
+				else{
+					$('.para').text("Showing all services");
+					$(".graphics").css('display','block');
+					$(".food").css('display','block');
+					$(".nature").css('display','block');
+				}
+			});	
+	});
+	
 </script>
 </body>
 </html>
